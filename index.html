@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manggari</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      class="z-100 bg-(--green) py-4 px-20 fixed top-0 left-0 right-0 flex justify-between items-center shadow-sm shadow-(--black)"
+    >
+      <div class="flex items-center">
+        <img src="./assets/logo.png" class="w-10" alt="" />
+        <p class="text-2xl text-white font-bold">Desa Manggari</p>
+      </div>
+      <nav class="flex gap-10 text-white text-md font-md">
+        <a href="">Profil</a>
+        <a href="">Lembaga</a>
+        <a href="">Informasi</a>
+        <a href="">Direktori</a>
+        <a href="">Sejarah</a>
+      </nav>
+    </header>
+
+    <!-- Landing Page -->
+    <section class="max-h-[170dvh] bg-(--green) py-4 px-20">
+      <div class="mt-20 p-30 bg-black/15 backdrop-blur-xl rounded-4xl">
+        <div class="flex gap-10 mb-8">
+          <div class="flex-2">
+            <h1 class="text-4xl text-white font-bold mb-2">
+              Selamat Datang Di Website Resmi Desa Manggari
+            </h1>
+            <p class="text-md text-white font-md">
+              Website ini kami hadirkan sebagai sarana informasi, komunikasi,
+              dan transparansi bagi seluruh masyarakat. Melalui platform ini,
+              kami berupaya membuka akwisatases seluas-luasnya mengenai kegiatan
+              pemerintahan, pembangunan desa, pelayanan publik, serta berbagai
+              potensi yang dimiliki oleh desa kita. Kami berharap website ini
+              dapat menjadi penghubung antara pemerintah desa dan masyarakat,
+              sekaligus menjadi ruang berbagi informasi positif untuk kemajuan
+              bersama.
+            </p>
+          </div>
+          <div class="flex-1">
+            <img
+              src="./assets/kades.jpg"
+              class="rounded-md aspect-square object-cover"
+              alt="ketua desa"
+            />
+          </div>
+        </div>
+        <article class="bg-(--white) p-12 rounded-4xl text-center mb-8">
+          <h2 class="text-(--green) text-2xl font-bold mb-2">Visi</h2>
+          <p class="text-(--black) text-md">
+            “Mewujudkan Desa Manggari yang maju, mandiri, berdaya saing, dan
+            sejahtera melalui pemerintahan yang transparan dan pembangunan yang
+            berkelanjutan.”
+          </p>
+        </article>
+        <article class="bg-(--white) p-12 rounded-4xl text-center mb-8">
+          <h2 class="text-(--green) text-2xl font-bold mb-2">Misi</h2>
+          <p class="text-(--black) text-md text-start">
+            1. Meningkatkan kualitas pelayanan publik yang cepat, tepat, dan
+            akuntabel. <br />
+            2. Mengembangkan potensi ekonomi masyarakat melalui UMKM dan
+            pertanian. <br />
+            3. Mendorong pembangunan infrastruktur yang merata dan berorientasi
+            kebutuhan warga. <br />
+            4. Menguatkan kerjasama antar lembaga desa dan masyarakat. <br />
+            5. Memanfaatkan teknologi digital untuk meningkatkan keterbukaan
+            informasi desa.
+          </p>
+        </article>
+        <div class="flex bg-(--white) p-12 rounded-4xl">
+          <article class="flex-1">
+            <h2 class="text-2xl font-bold text-(--green) mb-2">
+              Data Umum Desa
+            </h2>
+            <p class="text-md text-(--black)">
+              Luas wilayah: ± XXX ha <br />
+              Jumlah penduduk: XXX jiwa <br />
+              Jumlah RT/RW: X RT — X RW <br />
+              Kecamatan: — <br />
+              Kabupaten: — <br />
+              Kode Pos: — <br />
+              Potensi utama: Budaya dan wisata alam.
+            </p>
+          </article>
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-(--green) mb-2">Peta Desa</h2>
+            <img src="./assets/peta-desa.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita -->
+    <section class="mt-[40dvh] py-12 px-20">
+      <h1 class="text-4xl text-(--green) font-bold mb-6">Berita Desa</h1>
+      
+      <div class="flex gap-10 overflow-x-auto p-4 no-scrollbar">
+        
+        <div class="bg-(--white) shadow-sm shadow-black rounded-md max-w-[300px] flex-shrink-0">
+          <div>
+            <img class="w-full rounded-md" src="./assets/carousel.jpg" alt="" />
+          </div>
+          <article class="p-6">
+            <h2 class="text-xl text-(--green) font-bold mb-2">Biji Prabow-</h2>
+            <p class="text-md text-(--black) mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+              obcaecati soluta mollitia et. Vitae, temporibus.
+            </p>
+            <a href="" class="inline-block p-2 bg-(--green) text-(--white) rounded-sm">Baca Selengkapnya </a>
+          </article>
+        </div>
+        <div class="bg-(--white) shadow-sm shadow-black rounded-md max-w-[300px] flex-shrink-0">
+          <div>
+            <img class="w-full rounded-md" src="./assets/carousel.jpg" alt="" />
+          </div>
+          <article class="p-6">
+            <h2 class="text-xl text-(--green) font-bold mb-2">Biji Prabow-</h2>
+            <p class="text-md text-(--black) mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+              obcaecati soluta mollitia et. Vitae, temporibus.
+            </p>
+            <a href="" class="inline-block p-2 bg-(--green) text-(--white) rounded-sm">Baca Selengkapnya </a>
+          </article>
+        </div>
+        <div class="bg-(--white) shadow-sm shadow-black rounded-md max-w-[300px] flex-shrink-0">
+          <div>
+            <img class="w-full rounded-md" src="./assets/carousel.jpg" alt="" />
+          </div>
+          <article class="p-6">
+            <h2 class="text-xl text-(--green) font-bold mb-2">Biji Prabow-</h2>
+            <p class="text-md text-(--black) mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+              obcaecati soluta mollitia et. Vitae, temporibus.
+            </p>
+            <a href="" class="inline-block p-2 bg-(--green) text-(--white) rounded-sm">Baca Selengkapnya </a>
+          </article>
+        </div>
+        <div class="bg-(--white) shadow-sm shadow-black rounded-md max-w-[300px] flex-shrink-0">
+          <div>
+            <img class="w-full rounded-md" src="./assets/carousel.jpg" alt="" />
+          </div>
+          <article class="p-6">
+            <h2 class="text-xl text-(--green) font-bold mb-2">Biji Prabow-</h2>
+            <p class="text-md text-(--black) mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+              obcaecati soluta mollitia et. Vitae, temporibus.
+            </p>
+            <a href="" class="inline-block p-2 bg-(--green) text-(--white) rounded-sm">Baca Selengkapnya </a>
+          </article>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- wisata -->
+    <section class="py-12 px-20 ">
+      <h1 class="text-4xl text-(--green) font-bold mb-6">Budaya Dan Wisata Desa</h1>
+      <div class="bg-[url(./assets/crv.jpg)] min-h-[40dvh] bg-center bg-cover bg-no-repeat rounded-md text-center p-20 mb-12">
+        <h1 class="text-4xl text-(--green) font-bold mb-2">Ciremai Rindang View</h1>
+        <p class="text-md text-(--white) max-w-[50%] mx-auto mb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          dolores, delectus iste assumenda suscipit blanditiis recusandae totam
+          quibusdam corporis minus.
+        </p>
+        <a href="#" class="inline-block text-(--white) py-2 px-4 bg-(--green) text-md font-bold rounded-sm">Kunjungi Sekarang</a>
+      </div>
+      <div class="bg-[url(./assets/silat2.jpg)] min-h-[40dvh] bg-center bg-cover bg-no-repeat rounded-md text-center p-20">
+        <h1 class="text-4xl text-(--green) font-bold mb-2">Pencak Silat Merak Emas</h1>
+        <p class="text-md text-(--white) max-w-[50%] mx-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          dolores, delectus iste assumenda suscipit blanditiis recusandae totam
+          quibusdam corporis minus.
+        </p>
+        <a href="#" class="inline-block text-(--white) py-2 px-4 bg-(--green) text-md font-bold rounded-sm">Kunjungi Sekarang</a>
+      </div>
+      
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex py-12 px-20 gap-4 shadow-sm shadow-black">
+      <div class="flex-1">
+        <img class="w-[144px]" src="./assets/logo.png" alt="" />
+      </div>
+      <article class="flex-1">
+        <h1 class="text-xl font-bold">pemerintahan Desa Manggari</h1>
+        <p class="text-md font-md">
+          Kecamatan Lebakwangi <br />
+          Kabupaten Kuningan <br />
+          Jawa Barat
+        </p>
+      </article>
+      <article class="flex-1">
+        <h1 class="text-xl font-bold">Alamat Kantor</h1>
+        <p class="text-md font-md">
+          Desa Manggari. Jalan Raya Buahgama No. 85 Dusun manggari-Desa manggari
+          kode pos : 45574
+        </p>
+      </article>
+      <article class="flex-1">
+        <h1 class="text-xl font-bold">Hubungi Kami</h1>
+        <p class="text-md font-md">
+          No. telp : 082188888888 <br />
+          Email : Pemdes.manggari@gmail.com
+        </p>
+      </article>
+      <article class="flex-1">
+        <h1 class="text-xl font-bold">Situs Terkait</h1>
+        <a href="" class="inline-block">Website kemendagri </a>
+        <a href="" class="inline-block"> website Kabupaten Kuningan </a>
+        <a href="" class="inline-block"> Website kominfo </a>
+      </article>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
