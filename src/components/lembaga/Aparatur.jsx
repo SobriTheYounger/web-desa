@@ -1,10 +1,5 @@
-import useFetch from "../../customHook/useFetch";
 
-const Aparatur = () => {
-  const url =
-    "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=aparatur_desa";
-  const { result, hidden } = useFetch(url);
-
+const Aparatur = ({result, hidden}) => {
   return (
     <div className="bg-(--white) p-12 rounded-4xl mb-8">
       <h1 className="text-4xl text-(--green) mb-4 font-bold">Aparatur Desa</h1>

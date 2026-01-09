@@ -1,10 +1,4 @@
-import useFetch from "../../customHook/useFetch";
-
-const Home = () => {
-  const url =
-    "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=profil";
-
-  const { result, hidden } = useFetch(url);
+const Home = ({result, hidden}) => {
 
   return (
     <section className="min-h-dvh bg-(--green) px-20">
@@ -76,8 +70,10 @@ const Home = () => {
               </div>
               <div className="bg-(--white) p-12 rounded-4xl text-center mb-8">
                 <h2 className="text-(--green) text-2xl font-bold mb-2">Misi</h2>
-                <p className="text-(--black) text-md text-start">
-                  {item.misi.replace(/(\d+\.)/g, "")}
+                <p className="text-(--black) text-md text-start" style={{
+                  whiteSpace : "pre-line"
+                }}>
+                  {item.misi}
                 </p>
               </div>
               <div className="flex bg-(--white) p-12 rounded-4xl">

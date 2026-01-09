@@ -1,10 +1,4 @@
-import useFetch from "../../customHook/useFetch";
-
-const Wisata = () => {
-  const url =
-    "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=wisata_dan_budaya";
-  const { result, hidden } = useFetch(url);
-
+const Wisata = ({result, hidden}) => {
   return (
     <section id="wisata" className="p-4">
       <h1 className="text-4xl text-(--white) font-bold mb-6">

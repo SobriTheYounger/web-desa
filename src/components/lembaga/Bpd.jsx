@@ -1,8 +1,8 @@
-const Bumdes = ({result, hidden}) => {
+const Bpd = ({result, hidden}) => {
 
   return (
     <div className="bg-(--white) p-12 rounded-4xl mb-8">
-      <h1 className="text-4xl text-(--green) mb-4 font-bold">Bumdes</h1>
+      <h1 className="text-4xl text-(--green) mb-4 font-bold">BPD</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -22,15 +22,17 @@ const Bumdes = ({result, hidden}) => {
             </tr>
           </thead>
           <tbody>
-            {result && result.map((item) => (
+          {result && result.map((item) => (
               <tr key={item.id}>
                 <td className="px-4 py-2 border-1 border-black">{item.id}</td>
                 <td className="px-4 py-2 border-1 border-black">
                   {item.jabatan}
                 </td>
-                <td className="px-4 py-2 border-1 border-black">{item.nama}</td>
+                <td className="px-4 py-2 border-1 border-black">
+                  {item.nama}{" "}
+                </td>
               </tr>
-            ))}
+          ))}
           </tbody>
         </table>
       </div>
@@ -38,4 +40,4 @@ const Bumdes = ({result, hidden}) => {
   );
 };
 
-export default Bumdes;
+export default Bpd;

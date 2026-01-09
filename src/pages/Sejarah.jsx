@@ -22,7 +22,9 @@ const Sejarah = () => {
               <h1 className="text-4xl text-(--green) mb-4 font-bold">
                 {item.judul}
               </h1>
-              <p className="p-4 text-(--black) text-md">{item.sejarah}</p>
+              <p className="p-4 text-(--black) text-md" style={{
+                whiteSpace : "pre-line"
+              }}>{item.sejarah}</p>
             </div>
           ))}
         </div>
