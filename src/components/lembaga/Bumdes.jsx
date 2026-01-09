@@ -1,22 +1,9 @@
-import { useEffect, useState } from "react";
+import useFetch from "../../customHook/useFetch";
 
 const Bumdes = () => {
-  const [tableHidden, setTableHidden] = useState(true);
-  const [hidden, setHidden] = useState(false);
-  const [result, setResult] = useState([]);
-  useEffect(() => {
-    const getBumdes = async () => {
-      const url =
-        "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=bumdes";
-      const response = await fetch(url);
-      const json = await response.json();
-      const data = json.data;
-      setTableHidden(false);
-      setHidden(true);
-      setResult(data);
-    };
-    getBumdes();
-  }, []);
+  const url =
+    "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=bumdes";
+  const { result, hidden } = useFetch(url);
 
   return (
     <div className="bg-(--white) p-12 rounded-4xl mb-8">
@@ -30,28 +17,26 @@ const Bumdes = () => {
           <div className="sk-line"></div>
         </div>
       </div>
-      <div className={tableHidden ? "hidden" : "block"}>
+      <div className={hidden ? "block" : "hidden"}>
         <table className="w-full">
           <thead>
             <tr>
-              <th className="px-4 py-2 border-1 border-black">ID</th>
+              <th className="px-4 py-2 border-1 border-black">No</th>
               <th className="px-4 py-2 border-1 border-black">Jabatan</th>
               <th className="px-4 py-2 border-1 border-black">Nama</th>
             </tr>
           </thead>
-          {result.map((item) => (
-            <tbody>
+          <tbody>
+            {result && result.map((item) => (
               <tr key={item.id}>
                 <td className="px-4 py-2 border-1 border-black">{item.id}</td>
                 <td className="px-4 py-2 border-1 border-black">
                   {item.jabatan}
                 </td>
-                <td className="px-4 py-2 border-1 border-black">
-                  {item.nama}{" "}
-                </td>
+                <td className="px-4 py-2 border-1 border-black">{item.nama}</td>
               </tr>
-            </tbody>
-          ))}
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

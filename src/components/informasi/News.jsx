@@ -1,26 +1,13 @@
-import { useEffect, useState } from "react";
+import useFetch from "../../customHook/useFetch";
 
 const News = () => {
-  const [result, setResult] = useState([]);
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const getNews = async () => {
-      const url =
-        "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=berita";
-
-      const response = await fetch(url);
-      const json = await response.json();
-      const data = await json.data;
-      setResult(data);
-      setHidden(true);
-    };
-    getNews();
-  }, []);
+  const url =
+    "https://script.google.com/macros/s/AKfycbxva_ISH32JfLLyCO2o3p1h1ILtzplx_V5INqWKLjw7vKagV6mEVN3-7x6SaMX-3WMICA/exec?sheet=berita";
+  const { result, hidden } = useFetch(url);
 
   return (
-    <section className="mt-[40dvh] py-12 px-20">
-      <h1 className="text-4xl text-(--green) font-bold mb-6">Berita Desa</h1>
+    <section className="p-4">
+      <h1 className="text-4xl text-(--white) font-bold mb-6">Berita Desa</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -34,7 +21,7 @@ const News = () => {
         id="articles"
         className="flex gap-10 overflow-x-auto p-4 no-scrollbar"
       >
-        {result.map((item) => (
+        {result && result.map((item) => (
           <div
             key={item.id}
             className="bg-(--white) shadow-sm shadow-black rounded-md max-w-[300px] flex-shrink-0"

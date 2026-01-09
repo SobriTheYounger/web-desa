@@ -2,7 +2,7 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <footer className="flex mt-[40dvh] py-12 px-20 gap-4 shadow-sm shadow-black">
+    <footer className="flex mt-[20dvh] py-12 px-20 gap-4 shadow-sm shadow-black">
       <div className="flex-1">
         <img className="w-[144px]" src={logo} alt="" loading="lazy" />
       </div>
