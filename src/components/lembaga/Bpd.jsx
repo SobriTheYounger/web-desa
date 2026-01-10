@@ -2,7 +2,7 @@ const Bpd = ({result, hidden}) => {
 
   return (
     <div className="bg-(--white) md:p-12 p-6 rounded-xl mb-8">
-      <h1 className="text-xl text-(--green) mb-4 font-bold">BPD</h1>
+      <h1 className="text-xl text-(--green) mb-4 font-bold lg:text-4xl">BPD</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -13,7 +13,7 @@ const Bpd = ({result, hidden}) => {
         </div>
       </div>
       <div className={hidden ? "block" : "hidden"}>
-        <table className="w-full text-xs">
+        <table className="w-full text-xs md:text-sm lg:text-base">
           <thead>
             <tr>
               <th className="p-1 md:px-4 md:py-2 border-1 border-black">No</th>

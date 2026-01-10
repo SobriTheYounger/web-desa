@@ -1,7 +1,7 @@
 const News = ({ result, hidden }) => {
   return (
     <section className="md:p-4 mb-12">
-      <h1 className="text-4xl text-center text-(--white) font-bold mb-6">Berita Desa</h1>
+      <h1 className="text-4xl text-center text-(--white) font-bold mb-6 md:text-start">Berita Desa</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -37,7 +37,7 @@ const News = ({ result, hidden }) => {
                 </p>
                 <a
                   href=""
-                  className="inline-block text-(--green) text-md font-md"
+                  className="inline-block text-(--green) text-base font-md"
                 >
                   Baca Selengkapnya...
                 </a>

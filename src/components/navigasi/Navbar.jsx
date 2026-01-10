@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="z-100 bg-(--green) px-4 py-4 md:px-20 fixed top-0 left-0 right-0 flex justify-between items-center shadow-sm shadow-(--black)">
+    <header className="z-100 bg-(--green) px-4 py-4 lg:px-20 fixed top-0 left-0 right-0 flex justify-between items-center shadow-sm shadow-(--black)">
       <div className="flex items-center">
         <img src={logo} className="w-10" alt="logo_desa" loading="lazy" />
         <p className="text-xl text-white font-bold" id="namaDesa">
@@ -20,7 +20,7 @@ const Navbar = () => {
 
       {/* DESKTOP */}
       <nav
-        className="max-md:hidden flex p-8 gap-8 text-(--black) text-white text-md font-md"
+        className="max-md:hidden flex gap-8 text-(--black) text-white text-md font-md"
       >
         <Link to="/">
           Profil
@@ -44,26 +44,26 @@ const Navbar = () => {
 
       {/* MOBILE */}
       <nav
-        className={` ${open ? "hidden" : "block" } md:hidden absolute top-0 h-dvh w-full right-0  p-8 bg-white md:gap-10 text-(--black) md:text-white text-md font-md`}
+        className={` ${open ? "block" : "hidden" } md:hidden absolute top-0 h-dvh w-full right-0  p-8 bg-white md:gap-10 text-(--black) md:text-white text-md font-md`}
       >
-        <Link to="/" onClick={() => setOpen(true)} className="block mb-2">
+        <Link to="/" onClick={() => setOpen(false)} className="block mb-2">
           Profil
         </Link>
         <Link
           to="/lembaga"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen(false)}
           className="block mb-2"
         >
           Lembaga
         </Link>
         <Link
           to="/informasi"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen(false)}
           className="block mb-2"
         >
           Informasi
         </Link>
-        <Link to="/sejarah" onClick={() => setOpen(true)} className="block">
+        <Link to="/sejarah" onClick={() => setOpen(false)} className="block">
           Sejarah
         </Link>
       </nav>

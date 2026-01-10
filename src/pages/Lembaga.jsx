@@ -26,8 +26,8 @@ const GetBpd = () => {
 
 const Lembaga = () => {
   return (
-    <section className="min-h-dvh bg-(--green) p-4 md:px-20">
-      <div className="translate-y-30 md:p-30 p-4 bg-black/15 backdrop-blur-xl rounded-xl animate-fade-up">
+    <section className="min-h-dvh bg-(--green) p-4 lg:px-20">
+      <div className="translate-y-30 md:p-12 lg:p-30 p-4 bg-black/15 backdrop-blur-xl rounded-xl animate-fade-up md:rounded-4xl">
         {GetAparatur()}
         {GetBumdes()}
         {GetBpd()}

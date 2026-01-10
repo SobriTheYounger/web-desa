@@ -2,7 +2,7 @@ const Bumdes = ({result, hidden}) => {
 
   return (
     <div className="bg-(--white) p-6 md:p-12 rounded-xl mb-8">
-      <h1 className="text-xl text-(--green) mb-4 font-bold">Bumdes</h1>
+      <h1 className="text-xl text-(--green) mb-4 font-bold lg:text-4xl">Bumdes</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -13,7 +13,7 @@ const Bumdes = ({result, hidden}) => {
         </div>
       </div>
       <div className={hidden ? "block" : "hidden"}>
-        <table className="w-full text-xs">
+        <table className="w-full text-xs md:text-sm lg:text-base">
           <thead>
             <tr>
               <th className="p-1 md:px-4 md:py-2 border-1 border-black">No</th>

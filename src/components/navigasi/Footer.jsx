@@ -2,9 +2,9 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col mt-[20dvh] py-12 px-4 md:px-20 gap-4 shadow-sm shadow-black text-center">
+    <footer className="flex flex-col mt-[20dvh] py-12 px-4 gap-4 shadow-sm shadow-black text-center lg:flex-row lg:px-20 lg:text-start">
       <div className="flex-1 self-center">
-        <img className="w-16" src={logo} alt="" loading="lazy" />
+        <img className="w-16 md:w-24" src={logo} alt="" loading="lazy" />
       </div>
       <div className="flex-1">
         <h1 className="text-xl font-bold">pemerintahan Desa Manggari</h1>
