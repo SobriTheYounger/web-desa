@@ -1,8 +1,8 @@
 const Bumdes = ({result, hidden}) => {
 
   return (
-    <div className="bg-(--white) p-12 rounded-4xl mb-8">
-      <h1 className="text-4xl text-(--green) mb-4 font-bold">Bumdes</h1>
+    <div className="bg-(--white) p-6 md:p-12 rounded-xl mb-8">
+      <h1 className="text-xl text-(--green) mb-4 font-bold">Bumdes</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -13,24 +13,26 @@ const Bumdes = ({result, hidden}) => {
         </div>
       </div>
       <div className={hidden ? "block" : "hidden"}>
-        <table className="w-full">
+        <table className="w-full text-xs">
           <thead>
             <tr>
-              <th className="px-4 py-2 border-1 border-black">No</th>
-              <th className="px-4 py-2 border-1 border-black">Jabatan</th>
-              <th className="px-4 py-2 border-1 border-black">Nama</th>
+              <th className="p-1 md:px-4 md:py-2 border-1 border-black">No</th>
+              <th className="p-1 md:px-4 md:py-2 border-1 border-black">Jabatan</th>
+              <th className="p-1 md:px-4 md:py-2 border-1 border-black">Nama</th>
             </tr>
           </thead>
           <tbody>
-            {result && result.map((item) => (
+          {result && result.map((item) => (
               <tr key={item.id}>
-                <td className="px-4 py-2 border-1 border-black">{item.id}</td>
-                <td className="px-4 py-2 border-1 border-black">
+                <td className="p-1 md:px-4 md:py-2 border-1 border-black">{item.id}</td>
+                <td className="p-1 md:px-4 md:py-2 border-1 border-black">
                   {item.jabatan}
                 </td>
-                <td className="px-4 py-2 border-1 border-black">{item.nama}</td>
+                <td className="p-1 md:px-4 md:py-2 border-1 border-black">
+                  {item.nama}
+                </td>
               </tr>
-            ))}
+          ))}
           </tbody>
         </table>
       </div>

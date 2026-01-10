@@ -1,7 +1,7 @@
 const News = ({ result, hidden }) => {
   return (
-    <section className="p-4">
-      <h1 className="text-4xl text-(--white) font-bold mb-6">Berita Desa</h1>
+    <section className="md:p-4 mb-12">
+      <h1 className="text-4xl text-center text-(--white) font-bold mb-6">Berita Desa</h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -32,7 +32,7 @@ const News = ({ result, hidden }) => {
                 <h2 className="title text-xl text-(--green) font-bold mb-2">
                   {item.judul_berita}
                 </h2>
-                <p className="description text-md text-(--black) mb-2">
+                <p className="description text-sm text-(--black) mb-2">
                   {item.isi_berita}...
                 </p>
                 <a

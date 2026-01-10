@@ -2,9 +2,9 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <footer className="flex mt-[20dvh] py-12 px-20 gap-4 shadow-sm shadow-black">
-      <div className="flex-1">
-        <img className="w-[144px]" src={logo} alt="" loading="lazy" />
+    <footer className="flex flex-col mt-[20dvh] py-12 px-4 md:px-20 gap-4 shadow-sm shadow-black text-center">
+      <div className="flex-1 self-center">
+        <img className="w-16" src={logo} alt="" loading="lazy" />
       </div>
       <div className="flex-1">
         <h1 className="text-xl font-bold">pemerintahan Desa Manggari</h1>
@@ -30,16 +30,14 @@ const Footer = () => {
       </div>
       <div className="flex-1">
         <h1 className="text-xl font-bold">Situs Terkait</h1>
-        <a href="" className="inline-block">
-          Website kemendagri{" "}
+        <a href="" className="block">
+          Website kemendagri
         </a>
-        <a href="" className="inline-block">
-          {" "}
-          website Kabupaten Kuningan{" "}
+        <a href="" className="block">
+          website Kabupaten Kuningan
         </a>
-        <a href="" className="inline-block">
-          {" "}
-          Website kominfo{" "}
+        <a href="" className="block">
+          Website kominfo
         </a>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 const Wisata = ({result, hidden}) => {
   return (
-    <section id="wisata" className="p-4">
-      <h1 className="text-4xl text-(--white) font-bold mb-6">
+    <section id="wisata" className="md:p-4">
+      <h1 className="text-4xl text-center text-(--white) font-bold mb-6">
         Budaya Dan Wisata Desa
       </h1>
       <div className={hidden ? "hidden" : "block"}>
@@ -20,13 +20,13 @@ const Wisata = ({result, hidden}) => {
         result.map((item) => (
           <div
             key={item.id}
-            className="mb-8 min-h-[40dvh] bg-center bg-cover bg-no-repeat rounded-md text-center p-20"
+            className="mb-8 min-h-[40dvh] bg-center bg-cover bg-no-repeat rounded-md text-center p-6"
             style={{ backgroundImage: `url(${item?.foto})` }}
           >
-            <h1 className="text-4xl text-(--green) font-bold mb-2">
+            <h1 className="text-xl text-(--green) font-bold mb-2">
               {item.wisata_dan_budaya}
             </h1>
-            <p className="text-md text-(--white) max-w-[70%] mx-auto">
+            <p className="text-sm text-(--black) md:max-w-[70%] mx-auto mb-4">
               {item.deskripsi}
             </p>
             <a
