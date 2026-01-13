@@ -7,29 +7,29 @@ const Footer = () => {
         <img className="w-16 md:w-24" src={logo} alt="" loading="lazy" />
       </div>
       <div className="flex-1">
-        <h1 className="text-xl font-bold">pemerintahan Desa Manggari</h1>
-        <p className="text-md font-md">
+        <h1 className="text-base md:text-xl font-bold">pemerintahan Desa Manggari</h1>
+        <p className="text-sm md:text-base font-md">
           Kecamatan Lebakwangi <br />
           Kabupaten Kuningan <br />
           Jawa Barat
         </p>
       </div>
       <div className="flex-1">
-        <h1 className="text-xl font-bold">Alamat Kantor</h1>
-        <p className="text-md font-md">
+        <h1 className="text-base md:text-xl font-bold">Alamat Kantor</h1>
+        <p className="text-sm md:text-base font-md">
           Desa Manggari. Jalan Raya Buahgama No. 85 Dusun manggari-Desa manggari
           kode pos : 45574
         </p>
       </div>
       <div className="flex-1">
-        <h1 className="text-xl font-bold">Hubungi Kami</h1>
-        <p className="text-md font-md">
+        <h1 className="text-base md:text-xl font-bold">Hubungi Kami</h1>
+        <p className="text-sm md:text-base font-md">
           No. telp : 082188888888 <br />
           Email : Pemdes.manggari@gmail.com
         </p>
       </div>
       <div className="flex-1">
-        <h1 className="text-xl font-bold">Situs Terkait</h1>
+        <h1 className="text-sm md:text-xl font-bold">Situs Terkait</h1>
         <a href="" className="block">
           Website kemendagri
         </a>

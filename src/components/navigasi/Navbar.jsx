@@ -13,7 +13,7 @@ const Navbar = () => {
     <header className="z-100 bg-(--green) px-4 py-4 lg:px-20 fixed top-0 left-0 right-0 flex justify-between items-center shadow-sm shadow-(--black)">
       <div className="flex items-center">
         <img src={logo} className="w-10" alt="logo_desa" loading="lazy" />
-        <p className="text-xl text-white font-bold" id="namaDesa">
+        <p className="text-sm md:text-xl text-white font-bold">
           Desa Manggari
         </p>
       </div>
@@ -44,9 +44,9 @@ const Navbar = () => {
 
       {/* MOBILE */}
       <nav
-        className={` ${open ? "block" : "hidden" } md:hidden absolute top-0 h-dvh w-full right-0  p-8 bg-white md:gap-10 text-(--black) md:text-white text-md font-md`}
+        className={` ${open ? "left-0" : "-left-100" } transition-all mt-10 -z-1 md:hidden absolute top-0 h-dvh w-50  p-8 bg-(--green) md:gap-10 text-(--white) font-md`}
       >
-        <Link to="/" onClick={() => setOpen(false)} className="block mb-2">
+        <Link to="/" onClick={() => setOpen(false)} className="mt-4 block mb-2">
           Profil
         </Link>
         <Link

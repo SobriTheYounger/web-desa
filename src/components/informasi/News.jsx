@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const News = ({ result, hidden }) => {
   return (
     <section className="md:p-4 mb-12">
@@ -33,14 +35,14 @@ const News = ({ result, hidden }) => {
                   {item.judul_berita}
                 </h2>
                 <p className="description text-sm text-(--black) mb-2">
-                  {item.isi_berita}...
+                  {item.isi_berita.slice(0, 100)}...
                 </p>
-                <a
-                  href=""
+                <Link
+                  to={`/informasi/berita/${item.id}` }
                   className="inline-block text-(--green) text-base font-md"
                 >
                   Baca Selengkapnya...
-                </a>
+                </Link>
               </div>
             </div>
           ))}

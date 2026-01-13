@@ -23,10 +23,10 @@ const Wisata = ({result, hidden}) => {
             className="mb-8 min-h-[40dvh] bg-center bg-cover bg-no-repeat rounded-md text-center p-6"
             style={{ backgroundImage: `url(${item?.foto})` }}
           >
-            <h1 className="text-xl text-(--green) font-bold mb-2 md:text-4xl">
+            <h1 className="text-xl text-(--green) font-bold mb-4 md:text-4xl">
               {item.wisata_dan_budaya}
             </h1>
-            <p className="text-sm text-(--black) md:max-w-[70%] mx-auto mb-4 md:text-base">
+            <p className="text-sm text-(--white) font-bold text-shadow-lg/30  md:max-w-[70%] mx-auto mb-4 md:text-base">
               {item.deskripsi}
             </p>
             <a
