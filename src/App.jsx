@@ -4,18 +4,20 @@ import Home from "./pages/Home";
 import Lembaga from "./pages/Lembaga";
 import Sejarah from "./pages/Sejarah";
 import Informasi from "./pages/Informasi";
-import NewsDetail from "./pages/NewsDetail"
+import NewsDetail from "./pages/NewsDetail";
+import LogIn from "./pages/LogIn";
 
 function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/lembaga" element={<Lembaga/>}/>
-        <Route path="/informasi" element={<Informasi/>} />
-        <Route path="/sejarah" element={<Sejarah/>} />
-        <Route path="/informasi/berita/:id" element={ <NewsDetail />} />
+        <Route path="/lembaga" element={<Lembaga />} />
+        <Route path="/informasi" element={<Informasi />} />
+        <Route path="/sejarah" element={<Sejarah />} />
+        <Route path="/informasi/berita/:id" element={<NewsDetail />} />
       </Route>
+      <Route path="/login" element={<LogIn />} />
     </Routes>
   );
 }
