@@ -1,8 +1,10 @@
-const Bumdes = ({result, hidden}) => {
-
+const Bumdes = ({ result, hidden }) => {
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
   return (
     <div className="bg-(--white) p-6 md:p-12 rounded-xl mb-8">
-      <h1 className="text-xl text-(--green) mb-4 font-bold lg:text-4xl">Bumdes</h1>
+      <h1 className="text-xl text-(--green) mb-4 font-bold lg:text-4xl">
+        Bumdes
+      </h1>
       <div className={hidden ? "hidden" : "block"}>
         <div className="skeletons">
           <div className="sk-title"></div>
@@ -17,22 +19,47 @@ const Bumdes = ({result, hidden}) => {
           <thead>
             <tr>
               <th className="p-1 md:px-4 md:py-2 border-1 border-black">No</th>
-              <th className="p-1 md:px-4 md:py-2 border-1 border-black">Jabatan</th>
-              <th className="p-1 md:px-4 md:py-2 border-1 border-black">Nama</th>
+              <th className="p-1 md:px-4 md:py-2 border-1 border-black">
+                Jabatan
+              </th>
+              <th className="p-1 md:px-4 md:py-2 border-1 border-black">
+                Nama
+              </th>
+              {isAdmin && (
+                <th className="p-1 md:px-4 md:py-2 border-1 border-black">
+                  Aksi
+                </th>
+              )}
             </tr>
           </thead>
           <tbody>
-          {result && result.map((item) => (
-              <tr key={item.id}>
-                <td className="p-1 md:px-4 md:py-2 border-1 border-black">{item.id}</td>
-                <td className="p-1 md:px-4 md:py-2 border-1 border-black">
-                  {item.jabatan}
-                </td>
-                <td className="p-1 md:px-4 md:py-2 border-1 border-black">
-                  {item.nama}
-                </td>
-              </tr>
-          ))}
+            {result &&
+              result.map((item) => (
+                <tr key={item.id}>
+                  <td className="p-1 md:px-4 md:py-2 border-1 border-black">
+                    {item.id}
+                  </td>
+                  <td className="p-1 md:px-4 md:py-2 border-1 border-black">
+                    {item.jabatan}
+                  </td>
+                  <td className="p-1 md:px-4 md:py-2 border-1 border-black">
+                    {item.nama}
+                  </td>
+                  {isAdmin && (
+                    <td className="p-1 md:px-4 md:py-2 border-1 border-black mr-2">
+                      <button className="p-1 md:px-2 md:py-1 border-1 border-black rounded">
+                        Edit
+                      </button>
+                      <button className="p-1 md:px-2 md:py-1 border-1 border-black ml-2 rounded">
+                        Tambah
+                      </button>
+                      <button className="p-1 md:px-2 md:py-1 border-1 border-black ml-2 rounded ">
+                        Hapus
+                      </button>
+                    </td>
+                  )}
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
